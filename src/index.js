@@ -10,9 +10,13 @@ const element = createElement('section', {class: 'header'}, [
   createElement('li', {class: 'item'}, ['Item 3'])
 ]);
 
-console.log(element);
+const elementNode = element.render();
+console.log(elementNode);
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const rootElement = document.getElementById('root');
+rootElement.appendChild(elementNode);
+
+// ReactDOM.render(<App />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
